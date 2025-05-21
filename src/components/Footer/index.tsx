@@ -11,7 +11,6 @@ const Footer = () => (
           <li>
             <Link>RPG</Link>
             <Link>Ação</Link>
-            <Link>Aventura</Link>
             <Link>Esportes</Link>
             <Link>Simulação</Link>
             <Link>Estrategia</Link>
