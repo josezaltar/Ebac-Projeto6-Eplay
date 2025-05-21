@@ -30,7 +30,7 @@ export const LinkItem = styled.li`
   margin-right: 16px;
 `
 
-export const LinkCart = styled.li`
+export const CartButton = styled.li`
   display: flex;
 
   img {
