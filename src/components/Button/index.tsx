@@ -4,7 +4,7 @@ export type Props = {
   type: 'button' | 'link'
   title: string
   to?: string
-  onclick?: () => void
+  onClick?: () => void
   children?: string
   variant?: 'primary' | 'secondary'
 }
@@ -13,7 +13,7 @@ const Button = ({
   type,
   title,
   to,
-  onclick,
+  onClick,
   children,
   variant = 'primary'
 }: Props) => {
@@ -23,7 +23,7 @@ const Button = ({
         variant={variant}
         type="button"
         title={title}
-        onClick={onclick}
+        onClick={onClick}
       >
         {children}
       </ButtonContainer>
