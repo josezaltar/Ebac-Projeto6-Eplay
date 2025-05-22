@@ -40,7 +40,7 @@ const Hero = ({ game }: Props) => {
               variant="primary"
               type="button"
               title="Adicionar esse jogo ao carrinho"
-              onclick={addToCart}
+              onClick={addToCart}
             >
               Adicionar ao carrinho
             </Button>
