@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { act, useState } from 'react'
+import * as Yup from 'yup'
+import { useFormik } from 'formik'
+import { InputGroup, Row, TabButton } from './styles'
+
 import Button from '../../components/Button'
 import Card from '../../components/Card'
-import { InputGroup, Row, TabButton } from './styles'
 
 import boleto from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
+
+import { usePurchaseMutation } from '../../services/api'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
+  const [purchase, { isLoading, isError, data }] = usePurchaseMutation()
 
   const form = useFormik({
     initialValues: {
@@ -70,7 +74,39 @@ const Checkout = () => {
       )
     }),
     onSubmit: (values) => {
-      console.log(values)
+      purchase({
+        billing: {
+          document: values.cpf,
+          email: values.email,
+          name: values.fullName
+        },
+        delivery: {
+          email: values.deliveryemail
+        },
+        payment: {
+          installments: 1,
+          card: {
+            active: payWithCard,
+            code: Number(values.cardCvv),
+            name: values.cardDisplayName,
+            number: values.cardNumber,
+            owner: {
+              document: values.cpfcardOwner,
+              name: values.cardOwner
+            },
+            expires: {
+              monthe: Number(values.expiresMonth),
+              year: Number(values.expiresYear)
+            }
+          }
+        },
+        products: [
+          {
+            id: 1,
+            price: 100
+          }
+        ]
+      })
     }
   })
   const getErrormessage = (fieldName: string, message?: string) => {
