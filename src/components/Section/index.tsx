@@ -1,16 +1,16 @@
-import { Container, Tittle } from './styles'
+import * as S from './styles'
 export type Props = {
   title: string
   background?: 'black' | 'gray'
   children: JSX.Element
 }
 const Section = ({ title, background, children }: Props) => (
-  <Container background={background}>
+  <S.Container background={background}>
     <div className="container">
-      <Tittle>{title}</Tittle>
+      <S.Tittle>{title}</S.Tittle>
       {children}
     </div>
-  </Container>
+  </S.Container>
 )
 
 export default Section
