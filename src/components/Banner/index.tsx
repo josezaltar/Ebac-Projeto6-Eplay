@@ -1,16 +1,17 @@
-import * as S from './styles'
-
 import Tag from '../Tag/index'
 import Button from '../Button'
+import Loader from '../Loader'
 
 import { useGetFeaturedGameQuery } from '../../services/api'
+
+import * as S from './styles'
 import { parseToBrl } from '../../utils'
 
 const Banner = () => {
   const { data: game } = useGetFeaturedGameQuery()
 
   if (!game) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
