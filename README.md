@@ -48,7 +48,7 @@ Você precisa ter o [Node.js](https://nodejs.org/en/) (que inclui o `npm`) insta
 
 1.  Clone o repositório:
     ```sh
-    git clone [https://github.com/SEU_USUARIO/eplay.git](https://github.com/SEU_USUARIO/eplay.git)
+    git clone https://github.com/josezaltar/Ebac-Projeto6-Eplay.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh
