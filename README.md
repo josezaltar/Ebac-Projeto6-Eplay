@@ -1,95 +1,67 @@
-# 🎮 Eplay - Loja Virtual de Games
+# 🎮 Eplay – Loja Virtual de Games
 
-Projeto desenvolvido durante o módulo de Front-End da EBAC com o objetivo de aplicar conceitos modernos de desenvolvimento web usando React e TypeScript.
-A aplicação simula uma loja virtual de jogos, com foco em visual atraente, responsividade, componentização e boas práticas de código.
+Bem-vindo ao repositório do **Eplay**, um projeto de e-commerce completo desenvolvido como parte do curso de Front-End da EBAC. A aplicação simula uma loja virtual de jogos, aplicando conceitos modernos e tecnologias avançadas do ecossistema React.
 
----
+**[➡️ Acesse a loja online aqui! ⬅️](https://e-play-ebac.vercel.app/)**
 
-## 🚀 Tecnologias Utilizadas
+##  галерея
 
-- ⚛️ React
-- 🟦 TypeScript
-- 💅 Styled Components
-- 🌐 React Router DOM
-- 📦 Vite ou Create React App (dependendo da versão)
-- 🧱 Componentes reutilizáveis
+| Página Inicial | Checkout | Confirmação de Pedido |
+| :---: | :---: | :---: |
+| ![Página Inicial](https://i.imgur.com/9xJYxMu.png) | ![Checkout](https://i.imgur.com/qry5MAu.png) | ![Confirmação de Pedido](https://i.imgur.com/ii9Pei5.png) |
 
----
+## 📖 Sobre o Projeto
 
-## ✨ Funcionalidades
+O Eplay é uma aplicação web robusta que demonstra um fluxo de e-commerce completo, desde a visualização de produtos até a finalização da compra. O projeto foi estruturado para ser escalável e manutenível, utilizando as melhores práticas de desenvolvimento, como gerenciamento de estado centralizado, validação de formulários e componentização.
 
-✅ Página inicial com banners e destaques
-✅ Listagem de jogos com nome, imagem, preço e descrição
-✅ Visual responsivo com layout adaptado para diferentes tamanhos de tela
-✅ Organização modular com separação clara de responsabilidades
-✅ Navegação entre páginas usando rotas do React Router
-✅ Estrutura de tipagem com TypeScript
-✅ Componentes estilizados com Styled Components
-✅ Imagens temáticas de jogos (Star Wars, Resident Evil, Diablo, etc.)
+O principal objetivo foi construir uma aplicação que não apenas parecesse profissional, mas que também funcionasse com a complexidade de um sistema real, incluindo a interação com um carrinho de compras e um processo de checkout seguro.
 
----
+## ✨ Funcionalidades Principais
 
-## 📂 Estrutura do Projeto
+* **Navegação Completa:** Página inicial com destaques, páginas de categorias e perfis de produtos.
+* **Carrinho de Compras Interativo:** Adicione, remova e visualize itens no carrinho de forma dinâmica.
+* **Fluxo de Checkout:** Processo de finalização de compra com formulários para dados de entrega e pagamento.
+* **Validação de Formulários:** Utilização do **Formik** e **Yup** para garantir que os dados inseridos pelo usuário sejam válidos antes de processar o pedido.
+* **Gerenciamento de Estado com Redux:** Controle centralizado do estado da aplicação (carrinho, modais, etc.) com **Redux Toolkit**.
+* **Design Totalmente Responsivo:** Experiência de usuário otimizada para desktops, tablets e celulares.
 
-```
-src/
-├── assets/          # Imagens e ícones usados no site
-├── components/      # Componentes reutilizáveis
-├── pages/           # Páginas principais da aplicação
-├── routes.tsx       # Definição das rotas
-├── styles.ts        # Estilos globais
-├── types.d.ts       # Tipagens personalizadas
-├── App.tsx          # Componente raiz
-└── index.tsx        # Ponto de entrada
-```
+## 🛠️ Tecnologias Utilizadas
 
----
+* **[React](https://reactjs.org/) (v18.2.0):** Biblioteca principal para a construção da interface.
+* **[TypeScript](https://www.typescriptlang.org/):** Garante um código mais seguro e robusto com tipagem estática.
+* **[Redux Toolkit](https://redux-toolkit.js.org/):** Para gerenciamento de estado global da aplicação.
+* **[Styled Components](https://styled-components.com/):** Para estilização de componentes de forma modular e dinâmica.
+* **[React Router DOM](https://reactrouter.com/):** Para gerenciamento de rotas e navegação.
+* **[Formik](https://formik.org/):** Para construção de formulários complexos.
+* **[Yup](https://github.com/jquense/yup):** Para validação de esquemas de dados de formulários.
+* **[ESLint](https://eslint.org/) & [Prettier](https://prettier.io/):** Para garantir a qualidade e a consistência do código.
 
-## 💻 Como Rodar o Projeto Localmente
+## 🚀 Começando
 
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/Ebac-Projeto6-Eplay.git
-```
+Para obter uma cópia local do projeto e executá-la, siga os passos abaixo.
 
-2. **Acesse o diretório do projeto**
-```bash
-cd Ebac-Projeto6-Eplay
-```
+### Pré-requisitos
 
-3. **Instale as dependências**
-```bash
-npm install
-```
+Você precisa ter o [Node.js](https://nodejs.org/en/) (que inclui o `npm`) instalado em sua máquina.
 
-4. **Rode o projeto em modo de desenvolvimento**
-```bash
+### Instalação
+
+1.  Clone o repositório:
+    ```sh
+    git clone [https://github.com/SEU_USUARIO/eplay.git](https://github.com/SEU_USUARIO/eplay.git)
+    ```
+2.  Navegue até o diretório do projeto:
+    ```sh
+    cd eplay
+    ```
+3.  Instale todas as dependências:
+    ```sh
+    npm install
+    ```
+
+### Executando a Aplicação
+
+Após a instalação, inicie o servidor de desenvolvimento:
+
+```sh
 npm start
-```
-
-5. **Acesse no navegador**
-[http://localhost:3000](http://localhost:3000)
-
----
-
-## 🌍 Link de Produção (Deploy)
-
-> https://ebac-projeto6-eplay-8njym2dg5-jose-zaltars-projects.vercel.app
-
----
-
-## 📬 Contato
-
-**José Zaltar**
-📧 josezaltar@gmail.com
-🔗 [linkedin.com/in/josezaltar](https://www.linkedin.com/in/josezaltar)
-
----
-
-## 🧠 Aprendizados
-
-- Prática com estrutura de projeto em React
-- Componentização e reutilização de elementos
-- Integração com Styled Components
-- Tipagem forte com TypeScript
-- Roteamento e navegação entre páginas
